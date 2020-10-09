@@ -8,21 +8,21 @@ import yfinance as yf
 import wikipedia
 import requests
 
-# Iniciando sistema de voz
+# Starting voice system
 
 engine = ts.init()
 engine.setProperty('rate', 150)
 engine.runAndWait()
 
-# Iniciando wikipédia
+# Wikipedia language
 
 wikipedia.set_lang("pt")
 
-# Iniciando sistema de reconhecimento
+# Starting recognition system
 rec = sp.Recognizer()
 mic = sp.Microphone()
 
-# Configurando Arduino
+# Arduino config
 Uno = Arduino('COM3')
 
 

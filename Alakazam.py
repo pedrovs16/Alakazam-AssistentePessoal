@@ -31,21 +31,20 @@ while True:
             try:
                 text = ft.Recognizing()
 
+                # Activating action
+
+                if 'AÇÃO' in text or 'AÇÕES' in text:
+                    ft.Stock()
 
                 # Turn off lights
 
-                if 'DESLIGAR' in text:
+                elif 'DESLIGAR' in text:
                     ft.LightOff()
 
                 # Turn on lights
 
                 elif 'LIGAR' in text:
                     ft.LightOn()
-
-                # Activating action
-
-                elif 'AÇÃO' in text or 'AÇÕES' in text:
-                    ft.Stock()
 
                 # Show the weather
 
