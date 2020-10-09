@@ -7,7 +7,7 @@ import keyboard
 
 while True:
     if keyboard.is_pressed('ctrl') and keyboard.is_pressed('alt') and keyboard.is_pressed('9'):
-        # Iniciando sistema de voz
+        # Starting voice system
 
         engine = ts.init()
         engine.setProperty('rate', 150)
@@ -15,54 +15,54 @@ while True:
         engine.say("Iniciando Alakazam")
         engine.runAndWait()
 
-        # Iniciando sistema de reconhecimento
+        # Starting recognition system
         rec = sp.Recognizer()
         mic = sp.Microphone(1)
 
-        # Iniciando
+        # Starting program
         print('Estou te escutando')
         engine.say("Estou te escutando")
         engine.runAndWait()
 
         while True:
 
-            # Reconhecendo voz
+            # Voice recognition
 
             try:
-                text = ft.Reconhecendo()
+                text = ft.Recognizing()
 
 
-                # DesligarLuz
+                # Turn off lights
 
                 if 'DESLIGAR' in text:
-                    ft.DesligarLuz()
+                    ft.LightOff()
 
-                # Ligar luz
+                # Turn on lights
 
                 elif 'LIGAR' in text:
-                    ft.LigarLuz()
+                    ft.LightOn()
 
-                # Ativar ação
+                # Activating action
 
                 elif 'AÇÃO' in text or 'AÇÕES' in text:
-                    ft.Acao()
+                    ft.Stock()
 
-                # Ver temperatura
+                # Show the weather
 
                 elif 'TEMPERATURA' in text or 'TEMPO' in text:
                     ft.Weather()
 
-                # Abrir Youtube
+                # Open Youtube
 
                 elif 'YOUTUBE' in text:
                     ft.Youtube()
 
-                # Pesquisar no Wikipedia
+                # Search on Wikipédia
 
                 elif 'WIKIPÉDIA' in text or 'WIKIPEDIA' in text:
                     ft.Wikipedia()
 
-                # COTAÇÕES #
+                # PRICES #
 
                 # Dólar
 
@@ -74,7 +74,7 @@ while True:
                 elif 'EURO' in text:
                     ft.Euro()
 
-                # Desativar sistema
+                # Disable system
 
                 elif 'DESATIVAR' in text:
                     print('Desativando')
@@ -83,7 +83,7 @@ while True:
                     engine.stop()
                     break
 
-                # Não entendeu a frase
+                # Another text
 
                 else:
                     print(f'Eu entendi {text}, tente novamente')

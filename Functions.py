@@ -26,7 +26,7 @@ mic = sp.Microphone()
 Uno = Arduino('COM3')
 
 
-def Reconhecendo():
+def Recognizing():
     with mic as fonte:
         rec.adjust_for_ambient_noise(fonte)
         audio = rec.listen(fonte)
@@ -39,14 +39,14 @@ def Reconhecendo():
     return text.upper()
 
 
-def Acao():
+def Stock():
     escolha = 0
     while escolha == 0:
         print('Escolha uma ação')
         engine.say('Escolha uma ação')
         engine.runAndWait()
         try:
-            text = Reconhecendo()
+            text = Recognizing()
             if text == "SAIR":
                 print('Saindo de ações')
                 engine.say('Saindo de ações')
@@ -68,7 +68,7 @@ def Acao():
             engine.runAndWait()
 
 
-def LigarLuz():
+def LightOn():
     print('Ligando')
     engine.say('ligando')
     engine.runAndWait()
@@ -76,7 +76,7 @@ def LigarLuz():
     sleep(1)
 
 
-def DesligarLuz():
+def LightOff():
     print('Desligando')
     engine.say('desligando')
     engine.runAndWait()
@@ -144,7 +144,7 @@ def Wikipedia():
         engine.say('O que você quer pesquisar')
         engine.runAndWait()
         try:
-            text = Reconhecendo()
+            text = Recognizing()
             if text == "SAIR":
                 print('Saindo de pesquisa')
                 engine.say('Saindo de pesquisa')
