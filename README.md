@@ -1,6 +1,6 @@
-# Alakazam-AssistentePessoal
+# Alakazam(AssistentePessoal)
 ##  Sobre o aplicativo
- Alakazam é um assistente pessoal feito totalmente no python tendo nele intereção com o arduino, possibilitando a automação domestica
+ Alakazam é um assistente pessoal feito totalmente no python tendo nele interação com o arduino, possibilitando a automação domestica
 
 ##  Módulos utilizadas
 - pyttsx3(Voz do assistente)
@@ -23,6 +23,9 @@
 - Falar um resumo do wikipédia do assunto escolhido
 - Ver cotação do dolar e euro
 - Fazer pesquisa no Google
+
+##  Melhorias a serem adicionadas
+Esse projeto ainda não está completo, sempre quando possível farei novas atualizações como chatBot entre outros
 
 ## Prática
 
