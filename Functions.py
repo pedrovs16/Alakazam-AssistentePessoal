@@ -40,8 +40,7 @@ def Recognizing():
 
 
 def Stock():
-    escolha = 0
-    while escolha == 0:
+    while True:
         print('Escolha uma ação')
         engine.say('Escolha uma ação')
         engine.runAndWait()
@@ -51,17 +50,17 @@ def Stock():
                 print('Saindo de ações')
                 engine.say('Saindo de ações')
                 engine.runAndWait()
-                escolha = 1
+                break
             else:
-                acao = yf.Ticker(f"{text.upper()}.SA")
-                carteira = acao.info
-                porcent = ((float(carteira["ask"])) / (float(carteira["previousClose"])) - 1) * 100
+                stock = yf.Ticker(f"{text.upper()}.SA")
+                wallet = stock.info
+                porcent = ((float(wallet["ask"])) / (float(wallet["previousClose"])) - 1) * 100
                 print(
-                    f'Ontem a ação da {carteira["shortName"]} foi, {carteira["previousClose"]} e agora está, '
-                    f'{carteira["ask"]} variou, {round(porcent, 2)} por cento')
+                    f'Ontem a ação da {wallet["shortName"]} foi, {wallet["previousClose"]} e agora está, '
+                    f'{wallet["ask"]} variou, {round(porcent, 2)} por cento')
                 engine.say(
-                    f'Ontem a ação da {carteira["shortName"]} foi, {carteira["previousClose"]} e agora está, '
-                    f'{carteira["ask"]} variou, {round(porcent, 2)} por cento')
+                    f'Ontem a ação da {wallet["shortName"]} foi, {wallet["previousClose"]} e agora está, '
+                    f'{wallet["ask"]} variou, {round(porcent, 2)} por cento')
                 engine.runAndWait()
         except:
             engine.say('Não entendi qual ação')
