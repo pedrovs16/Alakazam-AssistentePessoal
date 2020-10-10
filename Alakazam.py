@@ -73,6 +73,11 @@ while True:
                 elif 'EURO' in text:
                     ft.Euro()
 
+                # Google search
+
+                elif 'GOOGLE' in text:
+                    ft.GoogleSearch()
+
                 # Disable system
 
                 elif 'DESATIVAR' in text:

@@ -7,6 +7,7 @@ import webbrowser
 import yfinance as yf
 import wikipedia
 import requests
+import googlesearch
 
 # Starting voice system
 
@@ -177,4 +178,23 @@ def Euro():
 
 
 def GoogleSearch():
-    pass
+    while True:
+        print('O que você quer pesquisar')
+        engine.say('O que você quer pesquisar')
+        engine.runAndWait()
+        search = Recognizing()
+        try:
+            if search == 'SAIR':
+                print('Saindo do google')
+                engine.say('Saindo de google')
+                engine.runAndWait()
+                break
+            else:
+                print(f'Pesquisando {search}')
+                engine.say(f'Pesquisando {search}')
+                engine.runAndWait()
+                for url in googlesearch.search(search, stop=3, lang='pt'):
+                    webbrowser.open_new(url)
+        except:
+            engine.say('Não entendi o que você quer')
+            engine.runAndWait()
