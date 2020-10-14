@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import pyttsx3 as ts
 import speech_recognition as sp
-from pyfirmata import Arduino
+# from pyfirmata import Arduino
 from time import sleep
 import webbrowser
 import yfinance as yf
@@ -24,7 +24,7 @@ rec = sp.Recognizer()
 mic = sp.Microphone()
 
 # Arduino config
-Uno = Arduino('COM3')
+# Uno = Arduino('COM3')
 
 
 def Recognizing():
@@ -72,7 +72,7 @@ def LightOn():
     print('Ligando')
     engine.say('ligando')
     engine.runAndWait()
-    Uno.digital[13].write(1)
+    #Uno.digital[13].write(1)
     sleep(1)
 
 
@@ -80,7 +80,7 @@ def LightOff():
     print('Desligando')
     engine.say('desligando')
     engine.runAndWait()
-    Uno.digital[13].write(0)
+    #Uno.digital[13].write(0)
     sleep(1)
 
 
