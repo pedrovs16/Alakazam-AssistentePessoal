@@ -47,7 +47,7 @@ def Stock():
         engine.runAndWait()
         try:
             text = Recognizing()
-            if text == "SAIR":
+            if "SAIR" in text:
                 print('Saindo de ações')
                 engine.say('Saindo de ações')
                 engine.runAndWait()
