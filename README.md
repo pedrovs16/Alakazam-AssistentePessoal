@@ -31,4 +31,4 @@ Esse projeto ainda não está completo, sempre quando possível farei novas atua
 
 <hr>
 
-#####  Feito por Pedro Viana - Contato(https://www.linkedin.com/in/pedro-viana-886a361a7/)
+#####  Feito por Pedro Viana - Contato(https://www.linkedin.com/in/pedrovianaschroeder/)
